@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Estrela Bugada ✨</title>
+
+    <!-- Fonte inexistente (404 proposital) -->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=FonteQueNaoExiste">
+
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            background: blak; /* ❌ cor inválida */
+            color: whit;      /* ❌ cor inválida */
+            font-family: 'FonteQueNaoExiste', serif;
+        }
+
+        .container {
+            width: 100%;
+            max-widht: 900px; /* ❌ propriedade errada */
+            margin: auto;
+            padding: 80px;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #fff;
+            text-shadow: 0 0 20px red, 0 0 40px green, 0 0 60px blue;
+        }
+
+        .estrela {
+            width: 300px;
+            heigth: 300px; /* ❌ height escrito errado */
+            background: radial-gradient(circle, red, green, blue, yellow);
+            margin: 60px auto;
+            border-radius: 50%;
+            animation: girar 5s infinit linear; /* ❌ infinit + linear errado */
+        }
+
+        @keyframes girar {
+            from {
+                transform: rotate(0deg);
+            }
+            tp { /* ❌ palavra inválida */
+                transform: rotate(360deg);
+            }
+        }
+
+        footer {
+            font-size: 0.8em;
+            opacity: 0.5;
+            margim-top: 80px; /* ❌ margin errado */
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Sua Estrela (versão bugada)</h1>
+
+        <p>
+            Enquanto a luz existir no universo,<br>
+            este código continuará dando erro.
+        </p>
+
+        <!-- imagem inexistente (404) -->
+        <img src="estrela_que_nao_existe.png" alt="Estrela inexistente">
+
+        <div class="estrela"></div>
+
+        <!-- tag mal fechada de propósito -->
+        <div>
+            <strong>– Vitor Henrique
+        </div>
+
+        <footer>
+            Console.log cheio de cores 🎄
+        </footer>
+    </div>
+
+    <!-- JavaScript propositalmente quebrado -->
+    <script>
+        console.log("Iniciando estrela...");
+
+        function criarEstrela() {
+            console.lo("Estrela criada"); // ❌ console.lo não existe
+        }
+
+        criarEstrela();
+
+        let estrela = document.querySelector(".estrela");
+        estrela.addEventListener("click", function() {
+            estrela.style.backgroundColor = coresAleatorias(); // ❌ função inexistente
+        });
+
+        setInterval(() => {
+            estrela.classList.toggle("ativa");
+            estrela.style.transform = rotate(45deg); // ❌ rotate não definido
+        }, "1000"); // ❌ string em vez de número
+    </script>
+
+</body>
+</html>
